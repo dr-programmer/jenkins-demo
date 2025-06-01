@@ -22,8 +22,8 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh 'npm install pm2 -g || true'
-                sh 'pm2 start index.js || pm2 restart index.js'
+                sh 'npx pm2 start index.js || true'
+		sh 'npx pm2 restart index.js || true'
             }
         }
     }
